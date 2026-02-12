@@ -22,6 +22,7 @@ const PROJECTS = {
         { id: 1, name: "Digikua Admin", domain: "dk.app.somoafrica.org/login", status: "active" },
         { id: 2, name: "Digikua Business", domain: "business.app.somoafrica.org/login", status: "active" },
         { id: 3, name: "Weekly Tracker", domain: "weeklyactualssomo.vercel.app/", status: "active" },
+        { id: 6, name: "Loans", domain: "loans.somoafrica.org/#/home", status: "active" },
     ],
     staging: [
         { id: 4, name: "Digikua Admin", domain: "staging.app.somoafrica.org/login", status: "active" },
