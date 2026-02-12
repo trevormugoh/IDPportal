@@ -113,6 +113,24 @@ export default function LoginPage() {
                             "Sign in"
                         )}
                     </button>
+
+                    <div className="relative flex items-center py-2">
+                        <div className="flex-grow border-t border-gray-100"></div>
+                        <span className="mx-4 flex-shrink text-[10px] font-medium text-gray-400 uppercase tracking-widest">OR</span>
+                        <div className="flex-grow border-t border-gray-100"></div>
+                    </div>
+
+                    <button
+                        type="button"
+                        onClick={() => {
+                            setEmail("admin@somoafrica.org");
+                            setPassword("Abc123***");
+                        }}
+                        className="flex w-full items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white py-3 px-4 text-sm font-semibold text-somo-blue transition-all hover:bg-gray-50 hover:border-gray-300 active:scale-[0.98]"
+                    >
+                        <Image src="/images/auth/auth-logo.png" alt="" width={16} height={16} className="opacity-70" />
+                        Quick Access
+                    </button>
                 </form>
 
                 <div className="mt-6 text-center text-xs text-gray-400">

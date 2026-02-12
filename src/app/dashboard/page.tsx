@@ -136,13 +136,21 @@ export default function DashboardPage() {
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     <AnimatePresence mode="popLayout">
                         {filteredProjects.map((project) => (
-                            <motion.div
+                            <motion.a
                                 key={project.id}
+                                href={project.domain.startsWith('http') ? project.domain : `https://${project.domain}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 layout
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.95 }}
-                                className="group relative flex flex-col rounded-2xl bg-white p-4 border border-gray-100 shadow-sm transition-all hover:shadow-md sm:p-5"
+                                whileHover={{
+                                    y: -4,
+                                    backgroundColor: "rgba(204, 89, 0, 0.02)",
+                                    borderColor: "rgba(204, 89, 0, 0.2)"
+                                }}
+                                className="group relative flex flex-col rounded-2xl bg-white p-4 border border-gray-100 shadow-sm transition-all hover:shadow-lg sm:p-5"
                             >
                                 <div className="mb-3 flex items-start justify-between">
                                     <div className="rounded-xl bg-somo-gray p-2 text-somo-blue transition-colors group-hover:bg-somo-orange/10 group-hover:text-somo-orange">
@@ -155,12 +163,10 @@ export default function DashboardPage() {
                                     </div>
                                 </div>
 
-                                <h3 className="font-quicksand text-base font-bold text-somo-blue">{project.name}</h3>
-                                <div className="mt-0.5 flex items-center gap-2 text-xs text-gray-400">
-                                    <span>{project.domain}</span>
-                                    <a href={`https://${project.domain}`} target="_blank" rel="noopener noreferrer">
-                                        <ExternalLink className="h-3 w-3 transition-colors hover:text-somo-orange" />
-                                    </a>
+                                <h3 className="font-quicksand text-base font-bold text-somo-blue group-hover:text-somo-orange transition-colors">{project.name}</h3>
+                                <div className="mt-0.5 flex items-center justify-between text-xs text-gray-400">
+                                    <span className="truncate max-w-[180px]">{project.domain}</span>
+                                    <ExternalLink className="h-3.5 w-3.5 opacity-0 group-hover:opacity-100 group-hover:text-somo-orange transition-all" />
                                 </div>
 
                                 <div className="mt-4 flex items-center justify-between border-t border-gray-50 pt-3">
@@ -168,7 +174,7 @@ export default function DashboardPage() {
                                         Environment: <span className="font-bold text-gray-600 capitalize">{activeTab}</span>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </motion.a>
                         ))}
                     </AnimatePresence>
                 </div>
