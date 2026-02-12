@@ -57,7 +57,7 @@ export default function LoginPage() {
                         IDP Portal Login
                     </h2>
                     <p className="mt-2 text-center text-sm text-gray-500">
-                        Enter your credentials to access the deployment portal
+                        Enter your credentials to access the development platform
                     </p>
                 </div>
 

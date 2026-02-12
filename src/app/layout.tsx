@@ -16,7 +16,7 @@ const quicksand = Quicksand({
 
 export const metadata: Metadata = {
   title: "Somo - IDP Portal",
-  description: "Internal Deployment Portal for Somo projects.",
+  description: "Internal Development Platform for Somo projects.",
 };
 
 export default function RootLayout({

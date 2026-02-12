@@ -90,7 +90,7 @@ export default function DashboardPage() {
                 <div className="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
                     <div>
                         <h2 className="font-quicksand text-3xl font-bold text-somo-blue">Deployment Overview</h2>
-                        <p className="mt-1 text-[13px] text-gray-500">Manage and monitor project deployments across environments</p>
+                        <p className="mt-1 text-[13px] text-gray-500">Manage and monitor project deployments across environments on the development platform</p>
                     </div>
                 </div>
 
